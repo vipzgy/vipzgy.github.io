@@ -276,6 +276,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/每天一个linux命令（八）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangyaoZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuangyaoZhao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/24/每天一个linux命令（八）/" itemprop="url">每天一个linux命令（八）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T20:03:52+08:00">
+                2017-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/24/每天一个linux命令（八）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（八）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="cp"><a href="#cp" class="headerlink" title="cp"></a><strong>cp</strong></h1><p>cp命令用来复制文件或者目录，是Linux系统中最常用的命令之一。一般情况下，shell会设置一个别名，在命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，不管你是否使用-i参数。但是如果是在shell脚本中执行cp时，没有-i参数时不会询问是否覆盖。这说明命令行和shell脚本的执行方式有些不同。 </p>
+<h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>用法：<br>&emsp;&emsp;cp [选项]… [-T] 源 目的<br>&emsp;&emsp;或：cp [选项]… 源… 目录<br>&emsp;&emsp;或：cp [选项]… -t 目录 源…</p>
+<h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>将源文件复制至目标文件，或将多个源文件复制至目标目录。</p>
+<h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-a,–archive    等于-dR –preserve=all<br>–backup[=CONTROL    为每个已存在的目标文件创建备份<br>-b类似–backup 但不接受参数<br>–copy-contents 在递归处理是复制特殊文件内容<br>-d 等于–no-dereference –preserve=links<br>-f, –force 如果目标文件无法打开则将其移除并重试(当 -n 选项存在时则不需再选此项)<br>-i, –interactive 覆盖前询问(使前面的 -n 选项失效)<br>-H 跟随源文件中的命令行符号链接<br>-l, –link 链接文件而不复制<br>-L, –dereference 总是跟随符号链接<br>-n, –no-clobber 不要覆盖已存在的文件(使前面的 -i 选项失效)<br>-P, –no-dereference 不跟随源文件中的符号链接<br>-p 等于–preserve=模式,所有权,时间戳<br>–preserve[=属性列表   保持指定的属性(默认：模式,所有权,时间戳)，如果<br>               可能保持附加属性：环境、链接、xattr 等<br>-R, -r, –recursive  复制目录及目录内的所有项目</p>
+<h4 id="4．命令实例："><a href="#4．命令实例：" class="headerlink" title="4．命令实例："></a><strong>4．命令实例：</strong></h4><h5 id="4-1-例一：复制单个文件到目标目录，文件在目标文件中不存在"><a href="#4-1-例一：复制单个文件到目标目录，文件在目标文件中不存在" class="headerlink" title="4.1 例一：复制单个文件到目标目录，文件在目标文件中不存在"></a><strong>4.1 例一：复制单个文件到目标目录，文件在目标文件中不存在</strong></h5><p>命令：<br>cp log.log test5<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ll</div><div class="line">total 16</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 24 19:08 .</div><div class="line">drwxr-xr-x 18 zgy zgy 4096 Jul 24 19:07 ..</div><div class="line">-rw-rw-r--  1 zgy zgy    5 Jul 24 19:07 log.log</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 24 19:10 test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp log.log test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ ll</div><div class="line">total 12</div><div class="line">drwxrwxr-x 2 zgy zgy 4096 Jul 24 19:11 .</div><div class="line">drwxrwxr-x 3 zgy zgy 4096 Jul 24 19:08 ..</div><div class="line">-rw-rw-r-- 1 zgy zgy    5 Jul 24 19:11 log.log</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ rm log.log </div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ ls</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -a log.log test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ ll</div><div class="line">total 12</div><div class="line">drwxrwxr-x 2 zgy zgy 4096 Jul 24 19:11 .</div><div class="line">drwxrwxr-x 3 zgy zgy 4096 Jul 24 19:08 ..</div><div class="line">-rw-rw-r-- 1 zgy zgy    5 Jul 24 19:07 log.log</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $</div></pre></td></tr></table></figure></p>
+<p>说明：<br>在没有带-a参数时，两个文件的时间是不一样的。在带了-a参数时，两个文件的时间是一致的。  </p>
+<h5 id="4-2-例二：目标文件存在时，会询问是否覆盖"><a href="#4-2-例二：目标文件存在时，会询问是否覆盖" class="headerlink" title="4.2 例二：目标文件存在时，会询问是否覆盖"></a><strong>4.2 例二：目标文件存在时，会询问是否覆盖</strong></h5><p>命令：<br>cp log.log test5<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp log.log test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">log.log  test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -i log.log test5/</div><div class="line">cp: overwrite ‘test5/log.log’? y</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -ai log.log test5/</div><div class="line">cp: overwrite ‘test5/log.log’? y</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ll</div><div class="line">total 16</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 24 19:08 .</div><div class="line">drwxr-xr-x 18 zgy zgy 4096 Jul 24 19:07 ..</div><div class="line">-rw-rw-r--  1 zgy zgy    5 Jul 24 19:07 log.log</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 24 19:11 test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test5/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $ ll</div><div class="line">total 12</div><div class="line">drwxrwxr-x 2 zgy zgy 4096 Jul 24 19:11 .</div><div class="line">drwxrwxr-x 3 zgy zgy 4096 Jul 24 19:08 ..</div><div class="line">-rw-rw-r-- 1 zgy zgy    5 Jul 24 19:07 log.log</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test5 $</div></pre></td></tr></table></figure></p>
+<p>说明：<br>目标文件存在时，会询问是否覆盖。这是因为cp是cp -i的别名。目标文件存在时，即使加了-f标志，也还会询问是否覆盖。<br>不知道为啥我这里直接覆盖了，并没有提醒是否覆盖文件。</p>
+<h5 id="4-3-例三：复制整个目录"><a href="#4-3-例三：复制整个目录" class="headerlink" title="4.3 例三：复制整个目录"></a><strong>4.3 例三：复制整个目录</strong></h5><p>命令：<br>cp -a test3 test5<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -a test1 test2</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">log.log  test1  test2  test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test2</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ ls</div><div class="line">log2  test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ </div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -a test1 test4</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">log.log  test1  test2  test4  test5</div></pre></td></tr></table></figure></p>
+<p>说明：<br>注意目标目录存在与否结果是不一样的。目标目录存在时，整个源目录被复制到目标目录里面。</p>
+<h5 id="4-4-例四：复制的-log-log-建立一个连结档-log-link-log"><a href="#4-4-例四：复制的-log-log-建立一个连结档-log-link-log" class="headerlink" title="4.4 例四：复制的 log.log 建立一个连结档 log_link.log"></a><strong>4.4 例四：复制的 log.log 建立一个连结档 log_link.log</strong></h5><p>命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">log.log  test1  test2  test4  test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ cp -s log.log log_link.log</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ll</div><div class="line">total 28</div><div class="line">drwxrwxr-x  6 zgy zgy 4096 Jul 24 19:57 .</div><div class="line">drwxr-xr-x 18 zgy zgy 4096 Jul 24 19:18 ..</div><div class="line">lrwxrwxrwx  1 zgy zgy    7 Jul 24 19:57 log_link.log -&gt; log.log</div><div class="line">-rw-rw-r--  1 zgy zgy    5 Jul 24 19:07 log.log</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 24 19:18 test1</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 24 19:19 test2</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 24 19:18 test4</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 24 19:11 test5</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $</div></pre></td></tr></table></figure></p>
+<p>说明：<br>那个 log_link.log 是由 -s 的参数造成的，建立的是一个『快捷方式』，所以您会看到在文件的最右边，会显示这个文件是『连结』到哪里去的！</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html</a></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/每天一个linux命令（七）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,10 +536,7 @@
       
         
           
-            <h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a><strong>mv</strong></h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html</a></p>
-<hr>
-<p>mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。</p>
+            <h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a><strong>mv</strong></h1><p>mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>mv [选项] 源文件或目录 目标文件或目录</p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接也将丢失。</p>
 <h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-b ：若需覆盖文件，则覆盖前先行备份。<br>-f ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖；<br>-i ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！<br>-u ：若目标文件已经存在，且 source 比较新，才会更新(update)<br>-t  ： –target-directory=DIRECTORY move all SOURCE arguments into DIRECTORY，即指定mv的目标目录，该选项适用于移动多个源文件到一个目录的情况，此时目标目录在前，源文件在后。</p>
@@ -399,6 +555,9 @@
 <h5 id="4-8-例八：把当前目录的一个子目录里的文件移动到另一个子目录里"><a href="#4-8-例八：把当前目录的一个子目录里的文件移动到另一个子目录里" class="headerlink" title="4.8 例八：把当前目录的一个子目录里的文件移动到另一个子目录里"></a><strong>4.8 例八：把当前目录的一个子目录里的文件移动到另一个子目录里</strong></h5><p>命令：<br>mv test3/*.txt test5<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ ls</div><div class="line">log1.txt  log2.txt  test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> test1/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2/test1 $ ls</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2/test1 $ <span class="built_in">cd</span> .. ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">test2  test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test2</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ ls</div><div class="line">log1.txt  log2.txt  test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mv test2/*.txt test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log1.txt  log2.txt  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $</div></pre></td></tr></table></figure></p>
 <h5 id="4-9-例九：文件被覆盖前做简单备份，前面加参数-b"><a href="#4-9-例九：文件被覆盖前做简单备份，前面加参数-b" class="headerlink" title="4.9 例九：文件被覆盖前做简单备份，前面加参数-b"></a><strong>4.9 例九：文件被覆盖前做简单备份，前面加参数-b</strong></h5><p>命令：<br>mv log1.txt -b log2.txt<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log1.txt  log2.txt  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ mv log1.txt -b log2.txt </div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log2.txt  log2.txt~  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $</div></pre></td></tr></table></figure></p>
 <p>说明：<br>-b 不接受参数，mv会去读取环境变量VERSION_CONTROL来作为备份策略。<br>–backup该选项指定如果目标文件存在时的动作，共有四种备份策略：<br>1.CONTROL=none或off : 不备份。<br>2.CONTROL=numbered或t：数字编号的备份<br>3.CONTROL=existing或nil：如果存在以数字编号的备份，则继续编号备份m+1…n：<br>执行mv操作前已存在以数字编号的文件log2.txt.~1~，那么再次执行将产生log2.txt~2~，以次类推。如果之前没有以数字编号的文件，则使用下面讲到的简单备份。<br>4.CONTROL=simple或never：使用简单备份：在被覆盖前进行了简单备份，简单备份只能有一份，再次被覆盖时，简单备份也会被覆盖。</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html</a></p>
+<hr>
 
           
         
@@ -543,16 +702,16 @@
       
         
           
-            <h1 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a><strong>rmdir</strong></h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2742076.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2742076.html</a></p>
-<hr>
-<p>今天学习一下linux中命令： rmdir命令。rmdir是常用的命令，该命令的功能是删除空目录，一个目录被删除之前必须是空的。（注意，rm - r dir命令可代替rmdir，但是有很大危险性。）删除某目录时也必须具有对父目录的写权限。</p>
+            <h1 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a><strong>rmdir</strong></h1><p>今天学习一下linux中命令： rmdir命令。rmdir是常用的命令，该命令的功能是删除空目录，一个目录被删除之前必须是空的。（注意，rm - r dir命令可代替rmdir，但是有很大危险性。）删除某目录时也必须具有对父目录的写权限。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>rmdir [选项]… 目录…</p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>该命令从一个目录中删除一个或多个子目录项，删除某目录时也必须具有对父目录的写权限。 </p>
 <h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-p 递归删除目录dirname，当子目录删除后其父目录为空时，也一同被删除。如果整个路径被删除或者由于某种原因保留部分路径，则系统在标准输出上显示相应的信息。<br>-v, –verbose  显示指令执行过程 </p>
 <h4 id="4．命令实例："><a href="#4．命令实例：" class="headerlink" title="4．命令实例："></a><strong>4．命令实例：</strong></h4><h5 id="4-1-例一：rmdir-不能删除非空目录"><a href="#4-1-例一：rmdir-不能删除非空目录" class="headerlink" title="4.1 例一：rmdir 不能删除非空目录"></a><strong>4.1 例一：rmdir 不能删除非空目录</strong></h5><p>命令：<br>rmdir test<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  clstm  cnn  lstm  pytorch  stanford-segmenter-2015-12-09  <span class="built_in">test</span>  word2vec</div><div class="line">zgy@NLP ~ $ rmdir word2vec/</div><div class="line">rmdir: failed to remove ‘word2vec/’: Directory not empty</div><div class="line">zgy@NLP ~ $ rmdir <span class="built_in">test</span>/</div><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  clstm  cnn  lstm  pytorch  stanford-segmenter-2015-12-09  word2vec</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
 <p>说明：<br>rmdir 目录名 命令不能直接删除非空目录</p>
 <h5 id="4-2-例二：rmdir-p-当子目录被删除后使它也成为空目录的话，则顺便一并删除"><a href="#4-2-例二：rmdir-p-当子目录被删除后使它也成为空目录的话，则顺便一并删除" class="headerlink" title="4.2 例二：rmdir -p 当子目录被删除后使它也成为空目录的话，则顺便一并删除"></a><strong>4.2 例二：rmdir -p 当子目录被删除后使它也成为空目录的话，则顺便一并删除</strong></h5><p>命令：<br>rmdir -p test<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  clstm  cnn  lstm  pytorch  stanford-segmenter-2015-12-09  <span class="built_in">test</span>  word2vec</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> <span class="built_in">test</span>/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test1/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test1 $ ls</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test1 $ <span class="built_in">cd</span> ~</div><div class="line">zgy@NLP ~ $ rmdir -p <span class="built_in">test</span>/test1</div><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  clstm  cnn  lstm  pytorch  stanford-segmenter-2015-12-09  word2vec</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2742076.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2742076.html</a></p>
+<hr>
 
           
         
@@ -697,10 +856,7 @@
       
         
           
-            <h1 id="mr"><a href="#mr" class="headerlink" title="mr"></a><strong>mr</strong></h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/26/2740521.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/26/2740521.html</a></p>
-<hr>
-<p>昨天学习了创建文件和目录的命令mkdir，今天学习一下linux中删除文件和目录的命令：rm命令。rm是常用的命令，该命令的功能为删除一个目录中的一个或多个文件或目录，它也可以将某个目录及其下的所有文件及子目录均删除。对于链接文件，只是删除了链接，原有文件均保持不变。<br>rm是一个危险的命令，使用的时候要特别当心，尤其对于新手，否则整个系统就会毁在这个命令（比如在/（根目录）下执行rm * -rf）。所以，我们在执行rm之前最好先确认一下在哪个目录，到底要删除什么东西，操作时保持高度清醒的头脑。</p>
+            <h1 id="mr"><a href="#mr" class="headerlink" title="mr"></a><strong>mr</strong></h1><p>昨天学习了创建文件和目录的命令mkdir，今天学习一下linux中删除文件和目录的命令：rm命令。rm是常用的命令，该命令的功能为删除一个目录中的一个或多个文件或目录，它也可以将某个目录及其下的所有文件及子目录均删除。对于链接文件，只是删除了链接，原有文件均保持不变。<br>rm是一个危险的命令，使用的时候要特别当心，尤其对于新手，否则整个系统就会毁在这个命令（比如在/（根目录）下执行rm * -rf）。所以，我们在执行rm之前最好先确认一下在哪个目录，到底要删除什么东西，操作时保持高度清醒的头脑。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>rm [选项] 文件… </p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>删除一个目录中的一个或多个文件或目录，如果没有使用- r选项，则rm不会删除目录。如果使用 rm 来删除文件，通常仍可以将该文件恢复原状。</p>
 <h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-f, –force    忽略不存在的文件，从不给出提示。<br>-i, –interactive 进行交互式删除<br>-r, -R, –recursive   指示rm将参数中列出的全部目录和子目录均递归地删除。<br>-v, –verbose    详细显示进行的步骤<br>     –help     显示此帮助信息并退出<br>     –version  输出版本信息并退出</p>
@@ -712,7 +868,11 @@
 <p>ps.</p>
 <h5 id="4-5-例五：删除以-f-开头的文件"><a href="#4-5-例五：删除以-f-开头的文件" class="headerlink" title="4.5 例五：删除以 -f 开头的文件"></a><strong>4.5 例五：删除以 -f 开头的文件</strong></h5><p>命令：<br>rm – -f<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># touch -- -f</span></div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ls -- -f</span></div><div class="line">-f[root@localhost <span class="built_in">test</span>]<span class="comment"># rm -- -f</span></div><div class="line">rm：是否删除 一般空文件 “-f”? y</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ls -- -f</span></div><div class="line">ls: -f: 没有那个文件或目录</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment">#</span></div><div class="line">也可以使用下面的操作步骤:</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># touch ./-f</span></div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ls ./-f</span></div><div class="line">./-f[root@localhost <span class="built_in">test</span>]<span class="comment"># rm ./-f</span></div><div class="line">rm：是否删除 一般空文件 “./-f”? y</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
 <h5 id="4-6-例六：自定义回收站功能"><a href="#4-6-例六：自定义回收站功能" class="headerlink" title=" 4.6 例六：自定义回收站功能"></a><strong> 4.6 例六：自定义回收站功能</strong></h5><p>命令：<br>myrm(){ D=/tmp/$(date +%Y%m%d%H%M%S); mkdir -p $D; mv “$@” $D &amp;&amp; echo “moved to $D ok”; }<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># myrm()&#123; D=/tmp/$(date +%Y%m%d%H%M%S); mkdir -p $D; 	mv "$@" $D &amp;&amp; echo "moved to $D ok"; &#125;</span></div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># alias rm='myrm'</span></div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># touch 1.log 2.log 3.log</span></div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ll</span></div><div class="line">总计 16</div><div class="line">-rw-r--r-- 1 root root    0 10-26 15:08 1.log</div><div class="line">-rw-r--r-- 1 root root    0 10-26 15:08 2.log</div><div class="line">-rw-r--r-- 1 root root    0 10-26 15:08 3.log</div><div class="line">drwxr-xr-x 7 root root 4096 10-25 18:07 scf</div><div class="line">drwxrwxrwx 2 root root 4096 10-25 17:46 test3</div><div class="line">drwxr-xr-x 2 root root 4096 10-25 17:56 test4</div><div class="line">drwxr-xr-x 3 root root 4096 10-25 17:56 test5</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># rm [123].log</span></div><div class="line">moved to /tmp/20121026150901 ok</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ll</span></div><div class="line">总计 16drwxr-xr-x 7 root root 4096 10-25 18:07 scf</div><div class="line">drwxrwxrwx 2 root root 4096 10-25 17:46 test3</div><div class="line">drwxr-xr-x 2 root root 4096 10-25 17:56 test4</div><div class="line">drwxr-xr-x 3 root root 4096 10-25 17:56 test5</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># ls /tmp/20121026150901/</span></div><div class="line">1.log  2.log  3.log</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
-<p>说明：<br>上面的操作过程模拟了回收站的效果，即删除文件的时候只是把文件放到一个临时目录中，这样在需要的时候还可以恢复过来。<br>参考资料：<br>         <a href="http://codingstandards.iteye.com/blog/983531" target="_blank" rel="external">http://codingstandards.iteye.com/blog/983531</a> </p>
+<p>说明：<br>上面的操作过程模拟了回收站的效果，即删除文件的时候只是把文件放到一个临时目录中，这样在需要的时候还可以恢复过来。</p>
+<p>参考资料：<br>         <a href="http://codingstandards.iteye.com/blog/983531" target="_blank" rel="external">http://codingstandards.iteye.com/blog/983531</a> </p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/26/2740521.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/26/2740521.html</a></p>
+<hr>
 
           
         
@@ -857,10 +1017,7 @@
       
         
           
-            <h1 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><strong>mkdir</strong></h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html</a></p>
-<hr>
-<p>linux mkdir 命令用来创建指定的名称的目录，要求创建目录的用户在当前目录中具有写权限，并且指定的目录名不能是当前目录中已有的目录。</p>
+            <h1 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><strong>mkdir</strong></h1><p>linux mkdir 命令用来创建指定的名称的目录，要求创建目录的用户在当前目录中具有写权限，并且指定的目录名不能是当前目录中已有的目录。</p>
 <h3 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h3><p>mkdir [选项] 目录…</p>
 <h3 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h3><p>通过 mkdir 命令可以实现在指定位置创建以 DirName(指定的文件名)命名的文件夹或目录。要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)。 </p>
 <h3 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h3><p>-m, –mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask<br>-p, –parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;<br>-v, –verbose  每次创建新目录都显示信息<br>–help   显示此帮助信息并退出<br>–version  输出版本信息并退出</p>
@@ -870,6 +1027,9 @@
 <p>说明：<br>test3 的权限为rwxrwxrwx</p>
 <h5 id="4-4-例四：创建新目录都显示信息"><a href="#4-4-例四：创建新目录都显示信息" class="headerlink" title="4.4 例四：创建新目录都显示信息"></a><strong>4.4 例四：创建新目录都显示信息</strong></h5><p>命令：<br>mkdir -v test4<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mkdir -v test5</div><div class="line">mkdir: created directory ‘test5’</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mkdir -vp test6/test66</div><div class="line">mkdir: created directory ‘test6’</div><div class="line">mkdir: created directory ‘test6/test66’</div></pre></td></tr></table></figure></p>
 <h5 id="4-5-例五：一个命令创建项目的目录结构"><a href="#4-5-例五：一个命令创建项目的目录结构" class="headerlink" title="4.5 例五：一个命令创建项目的目录结构"></a><strong>4.5 例五：一个命令创建项目的目录结构</strong></h5><p>参考：<a href="http://www.ibm.com/developerworks/cn/aix/library/au-badunixhabits.html" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/aix/library/au-badunixhabits.html</a><br>命令：<br>mkdir -vp scf/{lib/,bin/,doc/{info,product},logs/{info,product},service/deploy/{info,product}}<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># mkdir -vp scf/&#123;lib/,bin/,doc/&#123;info,product&#125;,logs/&#123;info,product&#125;,service/deploy/&#123;info,product&#125;&#125;</span></div><div class="line">mkdir: 已创建目录 “scf”</div><div class="line">mkdir: 已创建目录 “scf/lib”</div><div class="line">mkdir: 已创建目录 “scf/bin”</div><div class="line">mkdir: 已创建目录 “scf/doc”</div><div class="line">mkdir: 已创建目录 “scf/doc/info”</div><div class="line">mkdir: 已创建目录 “scf/doc/product”</div><div class="line">mkdir: 已创建目录 “scf/logs”</div><div class="line">mkdir: 已创建目录 “scf/logs/info”</div><div class="line">mkdir: 已创建目录 “scf/logs/product”</div><div class="line">mkdir: 已创建目录 “scf/service”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy/info”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy/product”</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># tree scf/</span></div><div class="line">scf/</div><div class="line">|-- bin</div><div class="line">|-- doc</div><div class="line">|   |-- info</div><div class="line">|   `-- product</div><div class="line">|-- lib</div><div class="line">|-- logs</div><div class="line">|   |-- info</div><div class="line">|   `-- product</div><div class="line">`-- service</div><div class="line">   	 	`-- deploy</div><div class="line">  	    	|-- info</div><div class="line">        	`-- product</div><div class="line">12 directories, 0 files</div></pre></td></tr></table></figure></p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html</a></p>
+<hr>
 
           
         
@@ -1014,10 +1174,7 @@
       
         
           
-            <h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html</a></p>
-<hr>
-<p>Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。<br>在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。</p>
+            <h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><p>Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。<br>在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>pwd [选项]</p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>查看”当前工作目录“的完整路径</p>
 <h4 id="3．常用参数："><a href="#3．常用参数：" class="headerlink" title="3．常用参数："></a><strong>3．常用参数：</strong></h4><p>一般情况下不带任何参数<br>如果目录是链接时：<br>格式：pwd -P  显示出实际路径，而非使用连接（link）路径。 </p>
@@ -1028,6 +1185,9 @@
 <p>应该是输出绝对路径</p>
 <h5 id="4-4-例四：-bin-pwd"><a href="#4-4-例四：-bin-pwd" class="headerlink" title="4.4 例四：/bin/pwd"></a><strong>4.4 例四：/bin/pwd</strong></h5><p>命令：<br>/bin/pwd [选项]<br>选项：<br>-L 目录连接链接时，输出连接路径<br>-P 输出物理路径<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd </span></div><div class="line">/etc/rc.d/init.d</div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd --help</span></div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd -P</span></div><div class="line">/etc/rc.d/init.d</div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd -L</span></div><div class="line">/etc/init.d</div><div class="line">[root@localhost init.d]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
 <h5 id="4-5-例五：当前目录被删除了，而pwd命令仍然显示那个目录"><a href="#4-5-例五：当前目录被删除了，而pwd命令仍然显示那个目录" class="headerlink" title="4.5 例五：当前目录被删除了，而pwd命令仍然显示那个目录"></a><strong>4.5 例五：当前目录被删除了，而pwd命令仍然显示那个目录</strong></h5><p> 输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/cnn-origin/</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ mkdir removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ <span class="built_in">cd</span> removed/</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn/cnn-origin/removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ rm ../removed/ -rf</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn/cnn-origin/removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ /bin/<span class="built_in">pwd</span></div><div class="line">/bin/<span class="built_in">pwd</span>: couldn<span class="string">'t find directory entry in ‘..’ with matching i-node</span></div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ cd</div><div class="line">zgy@NLP ~ $ pwd</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ cd cnn/cnn-origin/</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ ls</div><div class="line">data  main.py  model.py  mydatasets.py  __pycache__  snapshot  train.py</div><div class="line">zgy@NLP ~/cnn/cnn-origin $</div></pre></td></tr></table></figure></p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html</a></p>
+<hr>
 
           
         
@@ -1172,10 +1332,7 @@
       
         
           
-            <h1 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html</a></p>
-<hr>
-<p>Linux cd 命令可以说是Linux中最基本的命令语句，其他的命令语句要进行操作，都是建立在使用 cd 命令上的。<br>所以，学习Linux 常用命令，首先就要学好 cd 命令的使用方法技巧。</p>
+            <h1 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h1><p>Linux cd 命令可以说是Linux中最基本的命令语句，其他的命令语句要进行操作，都是建立在使用 cd 命令上的。<br>所以，学习Linux 常用命令，首先就要学好 cd 命令的使用方法技巧。</p>
 <h4 id="1-命令格式："><a href="#1-命令格式：" class="headerlink" title="1. 命令格式："></a><strong>1. 命令格式：</strong></h4><p>cd [目录名]</p>
 <h4 id="2-命令功能："><a href="#2-命令功能：" class="headerlink" title="2. 命令功能："></a><strong>2. 命令功能：</strong></h4><p>切换当前目录至dirName</p>
 <h4 id="3-常用范例："><a href="#3-常用范例：" class="headerlink" title="3. 常用范例："></a><strong>3. 常用范例：</strong></h4><h5 id="3-1-例一：进入系统根目录"><a href="#3-1-例一：进入系统根目录" class="headerlink" title="3.1 例一：进入系统根目录"></a><strong>3.1 例一：进入系统根目录</strong></h5><p>命令：<br>cd /<br>输出：<br>[root@localhost ~]# cd /<br>说明：进入系统根目录,上面命令执行完后拿ls命令看一下，当前目录已经到系统根目录了 </p>
@@ -1188,6 +1345,9 @@
 <h5 id="3-4-例四：返回进入此目录之前所在的目录"><a href="#3-4-例四：返回进入此目录之前所在的目录" class="headerlink" title="3.4 例四：返回进入此目录之前所在的目录"></a><strong>3.4 例四：返回进入此目录之前所在的目录</strong></h5><p>命令：<br>cd -<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $</div></pre></td></tr></table></figure></p>
 <h5 id="3-5-例五：把上个命令的参数作为cd参数使用。"><a href="#3-5-例五：把上个命令的参数作为cd参数使用。" class="headerlink" title="3.5 例五：把上个命令的参数作为cd参数使用。 "></a><strong>3.5 例五：把上个命令的参数作为cd参数使用。 </strong></h5><p>命令：<br>cd !$<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> !$</div><div class="line"><span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
 <p>over</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html</a></p>
+<hr>
 
           
         
@@ -1332,10 +1492,7 @@
       
         
           
-            <h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html</a></p>
-<hr>
-<p>ls命令是linux下最常用的命令。ls命令就是list的缩写，ls用来打印出当前目录的清单，如果ls指定其他目录，那么就会显示指定目录里的文件及文件夹清单。 通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)，查看目录信息等等。ls 命令在日常的linux操作中用的很多!</p>
+            <h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a><strong>ls</strong></h1><p>ls命令是linux下最常用的命令。ls命令就是list的缩写，ls用来打印出当前目录的清单，如果ls指定其他目录，那么就会显示指定目录里的文件及文件夹清单。 通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)，查看目录信息等等。ls 命令在日常的linux操作中用的很多!</p>
 <h5 id="1-命令格式："><a href="#1-命令格式：" class="headerlink" title="1.  命令格式："></a><strong>1.  命令格式：</strong></h5><p>ls [选项] [目录名]</p>
 <h5 id="2-命令功能："><a href="#2-命令功能：" class="headerlink" title="2.  命令功能："></a><strong>2.  命令功能：</strong></h5><p>列出目标目录中所有的子目录和文件。</p>
 <h5 id="3-常用参数："><a href="#3-常用参数：" class="headerlink" title="3.  常用参数："></a><strong>3.  常用参数：</strong></h5><p>-a, –all 列出目录下的所有文件，包括以 . 开头的隐含文件<br>-A 同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。<br>-c  配合 -lt：根据 ctime 排序及显示 ctime (文件状态最后更改的时间)配合 -l：显示 ctime 但根据名称排序否则：根据 ctime 排序<br>-C 每栏由上至下列出项目<br>–color[=WHEN] 控制是否使用色彩分辨文件。WHEN 可以是’never’、’always’或’auto’其中之一<br>-d, –directory 将目录象文件一样显示，而不是显示其下的文件。<br>-D, –dired 产生适合 Emacs 的 dired 模式使用的结果<br>-f 对输出的文件不进行排序，-aU 选项生效，-lst 选项失效<br>-g 类似 -l,但不列出所有者<br>-G, –no-group 不列出任何有关组的信息<br>-h, –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)<br>–si 类似 -h,但文件大小取 1000 的次方而不是 1024<br>-H, –dereference-command-line 使用命令列中的符号链接指示的真正目的地<br>–indicator-style=方式 指定在每个项目名称后加上指示符号&lt;方式&gt;：none (默认)，classify (-F)，file-type (-p)<br>-i, –inode 印出每个文件的 inode 号<br>-I, –ignore=样式 不印出任何符合 shell 万用字符&lt;样式&gt;的项目<br>-k 即 –block-size=1K,以 k 字节的形式表示文件的大小。<br>-l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。<br>-L, –dereference 当显示符号链接的文件信息时，显示符号链接所指示的对象而并非符号链接本身的信息<br>-m 所有项目以逗号分隔，并填满整行行宽<br>-o 类似 -l,显示文件的除组信息外的详细信息。<br>-r, –reverse 依相反次序排列<br>-R, –recursive 同时列出所有子目录层<br>-s, –size 以块大小为单位列出所有文件的大小<br>-S 根据文件大小排序<br>–sort=WORD 以下是可选用的 WORD 和它们代表的相应选项：<br>extension -X status -c<br>none -U time -t<br>size -S atime -u<br>time -t access -u<br>version -v use -u<br>-t 以文件修改时间排序<br>-u 配合 -lt:显示访问时间而且依访问时间排序<br>配合 -l:显示访问时间但根据名称排序<br>否则：根据访问时间排序<br>-U 不进行排序;依文件系统原有的次序列出项目<br>-v 根据版本进行排序<br>-w, –width=COLS 自行指定屏幕宽度而不使用目前的数值<br>-x 逐行列出项目而不是逐栏列出<br>-X 根据扩展名排序<br>-1 每行只列出一个文件<br>–help 显示此帮助信息并离开<br>–version 显示版本信息并离开</p>
@@ -1350,6 +1507,9 @@
 </ol>
 </li>
 </ol>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html</a></p>
+<hr>
 
           
         
@@ -1582,7 +1742,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="pwd 转自http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html  Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录">
+<meta name="description" content="pwdLinux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录“的完整路径 3．常用参数：一般情况下不带任何参数如果目录是链接时：格式：pwd -P  显示出实际路径，而非使用连接（link）">
 <meta name="keywords" content="linux,bash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每天一个linux命令（三）">
 <meta property="og:url" content="http://yoursite.com/2017/07/19/每天一个linux命令（三）/index.html">
 <meta property="og:site_name" content="GuangyaoZhao">
-<meta property="og:description" content="pwd 转自http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html  Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录">
-<meta property="og:updated_time" content="2017-07-20T02:25:15.873Z">
+<meta property="og:description" content="pwdLinux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录“的完整路径 3．常用参数：一般情况下不带任何参数如果目录是链接时：格式：pwd -P  显示出实际路径，而非使用连接（link）">
+<meta property="og:updated_time" content="2017-07-24T12:05:47.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每天一个linux命令（三）">
-<meta name="twitter:description" content="pwd 转自http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html  Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录">
+<meta name="twitter:description" content="pwdLinux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。 1．命令格式：pwd [选项] 2．命令功能：查看”当前工作目录“的完整路径 3．常用参数：一般情况下不带任何参数如果目录是链接时：格式：pwd -P  显示出实际路径，而非使用连接（link）">
 
 
 
@@ -373,10 +373,7 @@
       
 
       
-        <h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html</a></p>
-<hr>
-<p>Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。<br>在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。</p>
+        <h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><p>Linux中用 pwd 命令来查看”当前工作目录“的完整路径。 简单得说，每当你在终端进行操作时，你都会有一个当前工作目录。<br>在不太确定当前位置时，就会使用pwd来判定当前目录在文件系统内的确切位置。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>pwd [选项]</p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>查看”当前工作目录“的完整路径</p>
 <h4 id="3．常用参数："><a href="#3．常用参数：" class="headerlink" title="3．常用参数："></a><strong>3．常用参数：</strong></h4><p>一般情况下不带任何参数<br>如果目录是链接时：<br>格式：pwd -P  显示出实际路径，而非使用连接（link）路径。 </p>
@@ -387,6 +384,9 @@
 <p>应该是输出绝对路径</p>
 <h5 id="4-4-例四：-bin-pwd"><a href="#4-4-例四：-bin-pwd" class="headerlink" title="4.4 例四：/bin/pwd"></a><strong>4.4 例四：/bin/pwd</strong></h5><p>命令：<br>/bin/pwd [选项]<br>选项：<br>-L 目录连接链接时，输出连接路径<br>-P 输出物理路径<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd </span></div><div class="line">/etc/rc.d/init.d</div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd --help</span></div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd -P</span></div><div class="line">/etc/rc.d/init.d</div><div class="line">[root@localhost init.d]<span class="comment"># /bin/pwd -L</span></div><div class="line">/etc/init.d</div><div class="line">[root@localhost init.d]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
 <h5 id="4-5-例五：当前目录被删除了，而pwd命令仍然显示那个目录"><a href="#4-5-例五：当前目录被删除了，而pwd命令仍然显示那个目录" class="headerlink" title="4.5 例五：当前目录被删除了，而pwd命令仍然显示那个目录"></a><strong>4.5 例五：当前目录被删除了，而pwd命令仍然显示那个目录</strong></h5><p> 输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/cnn-origin/</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ mkdir removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ <span class="built_in">cd</span> removed/</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn/cnn-origin/removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ rm ../removed/ -rf</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn/cnn-origin/removed</div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ /bin/<span class="built_in">pwd</span></div><div class="line">/bin/<span class="built_in">pwd</span>: couldn<span class="string">'t find directory entry in ‘..’ with matching i-node</span></div><div class="line">zgy@NLP ~/cnn/cnn-origin/removed $ cd</div><div class="line">zgy@NLP ~ $ pwd</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ cd cnn/cnn-origin/</div><div class="line">zgy@NLP ~/cnn/cnn-origin $ ls</div><div class="line">data  main.py  model.py  mydatasets.py  __pycache__  snapshot  train.py</div><div class="line">zgy@NLP ~/cnn/cnn-origin $</div></pre></td></tr></table></figure></p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2737730.html</a></p>
+<hr>
 
       
     </div>
@@ -515,7 +515,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

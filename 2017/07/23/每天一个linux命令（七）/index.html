@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="mv 转自http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html  mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（">
+<meta name="description" content="mvmv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源">
 <meta name="keywords" content="linux,bash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每天一个linux命令（七）">
 <meta property="og:url" content="http://yoursite.com/2017/07/23/每天一个linux命令（七）/index.html">
 <meta property="og:site_name" content="GuangyaoZhao">
-<meta property="og:description" content="mv 转自http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html  mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（">
-<meta property="og:updated_time" content="2017-07-23T02:03:49.745Z">
+<meta property="og:description" content="mvmv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源">
+<meta property="og:updated_time" content="2017-07-24T12:04:49.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每天一个linux命令（七）">
-<meta name="twitter:description" content="mv 转自http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html  mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（">
+<meta name="twitter:description" content="mvmv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。 1．命令格式：mv [选项] 源文件或目录 目标文件或目录 2．命令功能：视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源">
 
 
 
@@ -373,10 +373,7 @@
       
 
       
-        <h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a><strong>mv</strong></h1><hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html</a></p>
-<hr>
-<p>mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。</p>
+        <h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a><strong>mv</strong></h1><p>mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录。</p>
 <h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>mv [选项] 源文件或目录 目标文件或目录</p>
 <h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接也将丢失。</p>
 <h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-b ：若需覆盖文件，则覆盖前先行备份。<br>-f ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖；<br>-i ：若目标文件 (destination) 已经存在时，就会询问是否覆盖！<br>-u ：若目标文件已经存在，且 source 比较新，才会更新(update)<br>-t  ： –target-directory=DIRECTORY move all SOURCE arguments into DIRECTORY，即指定mv的目标目录，该选项适用于移动多个源文件到一个目录的情况，此时目标目录在前，源文件在后。</p>
@@ -395,6 +392,9 @@
 <h5 id="4-8-例八：把当前目录的一个子目录里的文件移动到另一个子目录里"><a href="#4-8-例八：把当前目录的一个子目录里的文件移动到另一个子目录里" class="headerlink" title="4.8 例八：把当前目录的一个子目录里的文件移动到另一个子目录里"></a><strong>4.8 例八：把当前目录的一个子目录里的文件移动到另一个子目录里</strong></h5><p>命令：<br>mv test3/*.txt test5<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ ls</div><div class="line">log1.txt  log2.txt  test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> test1/</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2/test1 $ ls</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2/test1 $ <span class="built_in">cd</span> .. ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ls</div><div class="line">test2  test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test2</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ ls</div><div class="line">log1.txt  log2.txt  test1</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test2 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ <span class="built_in">cd</span> ..</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mv test2/*.txt test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ <span class="built_in">cd</span> test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log1.txt  log2.txt  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $</div></pre></td></tr></table></figure></p>
 <h5 id="4-9-例九：文件被覆盖前做简单备份，前面加参数-b"><a href="#4-9-例九：文件被覆盖前做简单备份，前面加参数-b" class="headerlink" title="4.9 例九：文件被覆盖前做简单备份，前面加参数-b"></a><strong>4.9 例九：文件被覆盖前做简单备份，前面加参数-b</strong></h5><p>命令：<br>mv log1.txt -b log2.txt<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log1.txt  log2.txt  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ mv log1.txt -b log2.txt </div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $ ls</div><div class="line">log2.txt  log2.txt~  log3.txt</div><div class="line">zgy@NLP ~/<span class="built_in">test</span>/test3 $</div></pre></td></tr></table></figure></p>
 <p>说明：<br>-b 不接受参数，mv会去读取环境变量VERSION_CONTROL来作为备份策略。<br>–backup该选项指定如果目标文件存在时的动作，共有四种备份策略：<br>1.CONTROL=none或off : 不备份。<br>2.CONTROL=numbered或t：数字编号的备份<br>3.CONTROL=existing或nil：如果存在以数字编号的备份，则继续编号备份m+1…n：<br>执行mv操作前已存在以数字编号的文件log2.txt.~1~，那么再次执行将产生log2.txt~2~，以次类推。如果之前没有以数字编号的文件，则使用下面讲到的简单备份。<br>4.CONTROL=simple或never：使用简单备份：在被覆盖前进行了简单备份，简单备份只能有一份，再次被覆盖时，简单备份也会被覆盖。</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/27/2743022.html</a></p>
+<hr>
 
       
     </div>
@@ -448,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/24/每天一个linux命令（八）/" rel="prev" title="每天一个linux命令（八）">
+                每天一个linux命令（八） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +523,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
