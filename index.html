@@ -276,6 +276,230 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/每天一个linux命令（十）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangyaoZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuangyaoZhao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/26/每天一个linux命令（十）/" itemprop="url">每天一个linux命令（十）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T15:36:12+08:00">
+                2017-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/26/每天一个linux命令（十）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（十）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="cat"><a href="#cat" class="headerlink" title="cat"></a><strong>cat</strong></h1><p>cat命令的用途是连接文件或标准输入并打印。这个命令常用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。 </p>
+<h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>cat [选项]  [文件]…</p>
+<h4 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h4><p>cat主要有三大功能：<br>1.一次显示整个文件:cat filename<br>2.从键盘创建一个文件:cat &gt; filename 只能创建新文件,不能编辑已有文件.<br>3.将几个文件合并为一个文件:cat file1 file2 &gt; file</p>
+<h4 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h4><p>-A, –show-all           等价于 -vET<br>-b, –number-nonblank    对非空输出行编号<br>-e                       等价于 -vE<br>-E, –show-ends          在每行结束处显示 $<br>-n, –number     对输出的所有行编号,由1开始对所有输出的行数编号<br>-s, –squeeze-blank  有连续两行以上的空白行，就代换为一行的空白行<br>-t                       与 -vT 等价<br>-T, –show-tabs          将跳格字符显示为 ^I<br>-u                       (被忽略)<br>-v, –show-nonprinting   使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</p>
+<h4 id="4．使用实例："><a href="#4．使用实例：" class="headerlink" title="4．使用实例："></a><strong>4．使用实例：</strong></h4><h5 id="4-1-例一：把-log2012-log-的文件内容加上行号后输入-log2013-log-这个文件里"><a href="#4-1-例一：把-log2012-log-的文件内容加上行号后输入-log2013-log-这个文件里" class="headerlink" title="4.1 例一：把 log2012.log 的文件内容加上行号后输入 log2013.log 这个文件里"></a><strong>4.1 例一：把 log2012.log 的文件内容加上行号后输入 log2013.log 这个文件里</strong></h5><p>命令：<br>cat -n log2012.log log2013.log<br>输出：</p>
+<pre><code>zgy@NLP ~/test $ cat log2012.log 
+111111111111
+
+
+============
+zgy@NLP ~/test $ cat log2013.log 
+22222222222222222222
+
+
+====================
+zgy@NLP ~/test $ cat -n log2012.log log2013.log
+     1    111111111111
+     2    
+     3    
+     4    ============
+     5    22222222222222222222
+     6    
+     7    
+     8    ====================
+zgy@NLP ~/test $ 
+</code></pre><p>说明：</p>
+<h5 id="4-2-例二：把-log2012-log-和-log2013-log-的文件内容加上行号（空白行不加）之后将内容附加到-log-log-里"><a href="#4-2-例二：把-log2012-log-和-log2013-log-的文件内容加上行号（空白行不加）之后将内容附加到-log-log-里" class="headerlink" title="4.2 例二：把 log2012.log 和 log2013.log 的文件内容加上行号（空白行不加）之后将内容附加到 log.log 里"></a><strong>4.2 例二：把 log2012.log 和 log2013.log 的文件内容加上行号（空白行不加）之后将内容附加到 log.log 里</strong></h5><p>命令：<br>cat -b log2012.log log2013.log log.log<br>输出：</p>
+<pre><code>zgy@NLP ~/test $ cat -b log2012.log log2013.log &gt; log.log
+zgy@NLP ~/test $ cat log.log 
+     1    111111111111
+
+
+     2    ============
+     3    22222222222222222222
+
+
+     4    ====================
+zgy@NLP ~/test $ 
+</code></pre><h5 id="4-3-例三：把-log2012-log-的文件内容加上行号后输入-log-log-这个文件里"><a href="#4-3-例三：把-log2012-log-的文件内容加上行号后输入-log-log-这个文件里" class="headerlink" title="4.3 例三：把 log2012.log 的文件内容加上行号后输入 log.log 这个文件里"></a><strong>4.3 例三：把 log2012.log 的文件内容加上行号后输入 log.log 这个文件里</strong></h5><p>命令：<br>输出：</p>
+<pre><code>zgy@NLP ~/test $ cat log.log
+cat: log.log: No such file or directory
+zgy@NLP ~/test $ cat -n log2012.log &gt; log.log
+zgy@NLP ~/test $ ls
+log2012.log  log2013.log  log.log  test1  test2  test4  test5
+zgy@NLP ~/test $ cat log.log
+     1    111111111111
+     2    
+     3    
+     4    ============
+zgy@NLP ~/test $ cat -n log.log
+     1         1    111111111111
+     2         2    
+     3         3    
+     4         4    ============
+</code></pre><h5 id="4-4-例四：使用here-doc来生成文件"><a href="#4-4-例四：使用here-doc来生成文件" class="headerlink" title="4.4 例四：使用here doc来生成文件"></a><strong>4.4 例四：使用here doc来生成文件</strong></h5><p>输出：</p>
+<pre><code>zgy@NLP ~/test $ cat &gt; log.txt &lt;&lt;EOF
+&gt; Hello
+&gt; World
+&gt; Linux
+&gt; PWD=$(pwd)
+&gt; EOF
+zgy@NLP ~/test $ ls -l log.txt
+-rw-rw-r-- 1 zgy zgy 37 Jul 26 15:17 log.txt
+zgy@NLP ~/test $ cat log.txt
+Hello
+World
+Linux
+PWD=/home/zgy/test
+zgy@NLP ~/test $ 
+</code></pre><p>说明：<br>注意粗体部分，here doc可以进行字符串替换。<br>备注：<br>tac (反向列示)<br>命令：<br>tac log.txt<br>输出：</p>
+<pre><code>zgy@NLP ~/test $ tac log.txt
+PWD=/home/zgy/test
+Linux
+World
+Hello
+zgy@NLP ~/test $ 
+</code></pre><p>说明：<br>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html</a></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/25/每天一个linux命令（九）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1700,162 +1924,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GuangyaoZhao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GuangyaoZhao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/23/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-23T20:57:17+08:00">
-                2017-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/06/23/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1898,7 +1973,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
