@@ -276,6 +276,163 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/每天一个linux命令（11）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangyaoZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuangyaoZhao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/每天一个linux命令（11）/" itemprop="url">每天一个linux命令（11）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T09:17:07+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/29/每天一个linux命令（11）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（11）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="nl"><a href="#nl" class="headerlink" title="nl"></a><strong>nl</strong></h1><p>nl命令在linux系统中用来计算文件中行号。nl 可以将输出的文件内容自动的加上行号！其默认的结果与 cat -n 有点不太一样， nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。  </p>
+<h4 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h4><p>nl [选项]… [文件]…</p>
+<h4 id="2．命令参数："><a href="#2．命令参数：" class="headerlink" title="2．命令参数："></a><strong>2．命令参数：</strong></h4><p>-b  ：指定行号指定的方式，主要有两种：<br>-b a ：表示不论是否为空行，也同样列出行号(类似 cat -n)；<br>-b t ：如果有空行，空的那一行不要列出行号(默认值)；<br>-n  ：列出行号表示的方法，主要有三种：<br>-n ln ：行号在萤幕的最左方显示；<br>-n rn ：行号在自己栏位的最右方显示，且不加 0 ；<br>-n rz ：行号在自己栏位的最右方显示，且加 0 ；<br>-w  ：行号栏位的占用的位数。<br>-p 在逻辑定界符处不重新开始计算。 </p>
+<h4 id="3．命令功能："><a href="#3．命令功能：" class="headerlink" title="3．命令功能："></a><strong>3．命令功能：</strong></h4><p>nl 命令读取 File 参数（缺省情况下标准输入），计算输入中的行号，将计算过的行号写入标准输出。 在输出中，nl 命令根据您在命令行中指定的标志来计算左边的行。 输入文本必须写在逻辑页中。每个逻辑页有头、主体和页脚节（可以有空节）。 除非使用 -p 标志，nl 命令在每个逻辑页开始的地方重新设置行号。 可以单独为头、主体和页脚节设置行计算标志（例如，头和页脚行可以被计算然而文本行不能）。</p>
+<h4 id="4．使用实例："><a href="#4．使用实例：" class="headerlink" title="4．使用实例："></a><strong>4．使用实例：</strong></h4><h5 id="4-1-例一：用-nl-列出-log2012-log-的内容"><a href="#4-1-例一：用-nl-列出-log2012-log-的内容" class="headerlink" title="4.1 例一：用 nl 列出 log2012.log 的内容"></a><strong>4.1 例一：用 nl 列出 log2012.log 的内容</strong></h5><p>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/test $ nl log2012.log </div><div class="line">     1	111111111111</div><div class="line">       </div><div class="line">       </div><div class="line">     2	============</div><div class="line">zgy@NLP ~/test $ cat -n log2012.log </div><div class="line">     1	111111111111</div><div class="line">     2	</div><div class="line">     3	</div><div class="line">     4	============</div><div class="line">zgy@NLP ~/test $</div></pre></td></tr></table></figure></p>
+<p>说明：<br>文件中的空白行，nl 不会加上行号.和cat的功能类似</p>
+<h5 id="4-2-例二：用-nl-列出-log2012-log-的内容，空本行也加上行号"><a href="#4-2-例二：用-nl-列出-log2012-log-的内容，空本行也加上行号" class="headerlink" title="4.2 例二：用 nl 列出 log2012.log 的内容，空本行也加上行号"></a><strong>4.2 例二：用 nl 列出 log2012.log 的内容，空本行也加上行号</strong></h5><p>命令：<br>nl -b a log2012.log<br>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/test $ nl -b a log2012.log </div><div class="line">     1	111111111111</div><div class="line">     2	</div><div class="line">     3	</div><div class="line">     4	============</div></pre></td></tr></table></figure></p>
+<h5 id="4-3-例3：让行号前面自动补上0-统一输出格式"><a href="#4-3-例3：让行号前面自动补上0-统一输出格式" class="headerlink" title="4.3 例3：让行号前面自动补上0,统一输出格式"></a><strong>4.3 例3：让行号前面自动补上0,统一输出格式</strong></h5><p>命令：<br>nl -b a -n rz log2012.log<br>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/test $ nl -b a -n rz log2012.log </div><div class="line">000001	111111111111</div><div class="line">000002	</div><div class="line">000003	</div><div class="line">000004	============</div><div class="line">zgy@NLP ~/test $ </div><div class="line">zgy@NLP ~/test $ nl -b a -n rz -w 3 log2012.log </div><div class="line">001	111111111111</div><div class="line">002	</div><div class="line">003	</div><div class="line">004	============</div><div class="line">zgy@NLP ~/test $</div></pre></td></tr></table></figure></p>
+<p>说明：</p>
+<p>nl -b a -n rz 命令行号默认为六位，要调整位数可以加上参数 -w 3 调整为3位。</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/11/01/2749048.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/11/01/2749048.html</a></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/每天一个linux命令（十）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1762,168 +1919,6 @@ zgy@NLP ~/test $
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/每天一个linux命令（一）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GuangyaoZhao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GuangyaoZhao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/18/每天一个linux命令（一）/" itemprop="url">每天一个linux命令（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T18:48:01+08:00">
-                2017-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/18/每天一个linux命令（一）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a><strong>ls</strong></h1><p>ls命令是linux下最常用的命令。ls命令就是list的缩写，ls用来打印出当前目录的清单，如果ls指定其他目录，那么就会显示指定目录里的文件及文件夹清单。 通过ls 命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)，查看目录信息等等。ls 命令在日常的linux操作中用的很多!</p>
-<h5 id="1-命令格式："><a href="#1-命令格式：" class="headerlink" title="1.  命令格式："></a><strong>1.  命令格式：</strong></h5><p>ls [选项] [目录名]</p>
-<h5 id="2-命令功能："><a href="#2-命令功能：" class="headerlink" title="2.  命令功能："></a><strong>2.  命令功能：</strong></h5><p>列出目标目录中所有的子目录和文件。</p>
-<h5 id="3-常用参数："><a href="#3-常用参数：" class="headerlink" title="3.  常用参数："></a><strong>3.  常用参数：</strong></h5><p>-a, –all 列出目录下的所有文件，包括以 . 开头的隐含文件<br>-A 同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。<br>-c  配合 -lt：根据 ctime 排序及显示 ctime (文件状态最后更改的时间)配合 -l：显示 ctime 但根据名称排序否则：根据 ctime 排序<br>-C 每栏由上至下列出项目<br>–color[=WHEN] 控制是否使用色彩分辨文件。WHEN 可以是’never’、’always’或’auto’其中之一<br>-d, –directory 将目录象文件一样显示，而不是显示其下的文件。<br>-D, –dired 产生适合 Emacs 的 dired 模式使用的结果<br>-f 对输出的文件不进行排序，-aU 选项生效，-lst 选项失效<br>-g 类似 -l,但不列出所有者<br>-G, –no-group 不列出任何有关组的信息<br>-h, –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)<br>–si 类似 -h,但文件大小取 1000 的次方而不是 1024<br>-H, –dereference-command-line 使用命令列中的符号链接指示的真正目的地<br>–indicator-style=方式 指定在每个项目名称后加上指示符号&lt;方式&gt;：none (默认)，classify (-F)，file-type (-p)<br>-i, –inode 印出每个文件的 inode 号<br>-I, –ignore=样式 不印出任何符合 shell 万用字符&lt;样式&gt;的项目<br>-k 即 –block-size=1K,以 k 字节的形式表示文件的大小。<br>-l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。<br>-L, –dereference 当显示符号链接的文件信息时，显示符号链接所指示的对象而并非符号链接本身的信息<br>-m 所有项目以逗号分隔，并填满整行行宽<br>-o 类似 -l,显示文件的除组信息外的详细信息。<br>-r, –reverse 依相反次序排列<br>-R, –recursive 同时列出所有子目录层<br>-s, –size 以块大小为单位列出所有文件的大小<br>-S 根据文件大小排序<br>–sort=WORD 以下是可选用的 WORD 和它们代表的相应选项：<br>extension -X status -c<br>none -U time -t<br>size -S atime -u<br>time -t access -u<br>version -v use -u<br>-t 以文件修改时间排序<br>-u 配合 -lt:显示访问时间而且依访问时间排序<br>配合 -l:显示访问时间但根据名称排序<br>否则：根据访问时间排序<br>-U 不进行排序;依文件系统原有的次序列出项目<br>-v 根据版本进行排序<br>-w, –width=COLS 自行指定屏幕宽度而不使用目前的数值<br>-x 逐行列出项目而不是逐栏列出<br>-X 根据扩展名排序<br>-1 每行只列出一个文件<br>–help 显示此帮助信息并离开<br>–version 显示版本信息并离开</p>
-<h5 id="4-常用范例："><a href="#4-常用范例：" class="headerlink" title="4. 常用范例："></a><strong>4. 常用范例：</strong></h5><p>例一：列出/home/peidachang文件夹下的所有文件和目录的详细资料<br>命令：ls -l -R /home/peidachang<br>在使用 ls 命令时要注意命令的格式：在命令提示符后，首先是命令的关键字，接下来是命令参数，在命令参数之前要有一短横线“-”，所有的命令参数都有特定的作用，自己可以根据需要选用一个或者多个参数，在命令参数的后面是命令的操作对象。在以上这条命令“ ls -l -R /home/peidachang”中，“ls” 是命令关键字，“-l -R”是参数，“ /home/peidachang”是命令的操作对象。在这条命令中，使用到了两个参数，分别为“l”和“R”，当然，你也可以把他们放在一起使用，如下所示：<br>命令：ls -lR /home/peidachang<br>这种形式和上面的命令形式执行的结果是完全一样的。另外，如果命令的操作对象位于当前目录中，可以直接对操作对象进行操作;如果不在当前目录则需要给出操作对象的完整路径，例如上面的例子中，我的当前文件夹是peidachang文件夹，我想对home文件夹下的peidachang文件进行操作，我可以直接输入 ls -lR peidachang，也可以用 ls -lR /home/peidachang。<br>例二：列出当前目录中所有以“t”开头的目录的详细内容，可以使用如下命令：<br>命令：ls -l t<em><br>可以查看当前目录下文件名以“t”开头的所有文件的信息。其实，在命令格式中，方括号内的内容都是可以省略的，对于命令ls而言，如果省略命令参数和操作对象，直接输入“ ls ”，则将会列出当前工作目录的内容清单。<br>例三：只列出文件下的子目录<br>命令：ls -F /opt/soft |grep /$<br>列出 /opt/soft 文件下面的子目录<br>输出：<br>[root@localhost opt]# ls -F /opt/soft |grep /$<br>jdk1.6.0_16/<br>subversion-1.6.1/<br>tomcat6.0.32/<br>命令：ls -l /opt/soft | grep “^d”<br>列出 /opt/soft 文件下面的子目录详细情况<br>输出：<br>[root@localhost opt]#  ls -l /opt/soft | grep “^d”<br>drwxr-xr-x 10 root root      4096 09-17 18:17 jdk1.6.0_16<br>drwxr-xr-x 16 1016 1016      4096 10-11 03:25 subversion-1.6.1<br>drwxr-xr-x  9 root root      4096 2011-11-01 tomcat6.0.32<br>例四：列出目前工作目录下所有名称是s 开头的档案，愈新的排愈后面，可以使用如下命令：<br>命令：ls -ltr s</em><br>输出：<br>[root@localhost opt]# ls -ltr s<em><br>src:<br>总计 0<br>script:<br>总计 0<br>soft:<br>总计 350644<br>drwxr-xr-x  9 root root      4096 2011-11-01 tomcat6.0.32<br>-rwxr-xr-x  1 root root  81871260 09-17 18:15 jdk-6u16-linux-x64.bin<br>drwxr-xr-x 10 root root      4096 09-17 18:17 jdk1.6.0_16<br>-rw-r–r–  1 root root 205831281 09-17 18:33 apache-tomcat-6.0.32.tar.gz<br>-rw-r–r–  1 root root   5457684 09-21 00:23 tomcat6.0.32.tar.gz<br>-rw-r–r–  1 root root   4726179 10-10 11:08 subversion-deps-1.6.1.tar.gz<br>-rw-r–r–  1 root root   7501026 10-10 11:08 subversion-1.6.1.tar.gz<br>drwxr-xr-x 16 1016 1016      4096 10-11 03:25 subversion-1.6.1<br>例五：列出目前工作目录下所有档案及目录;目录于名称后加”/“, 可执行档于名称后加”</em>“<br>命令：ls -AF<br>输出：<br>[root@localhost opt]# ls -AF<br>log/  script/  soft/  src/  svndata/  web/<br>例六：计算当前目录下的文件数和目录数<br>命令：<br>ls -l <em> |grep “^-“|wc -l —文件个数<br>ls -l </em> |grep “^d”|wc -l    —目录个数<br>例七: 在ls中列出文件的绝对路径<br>命令：ls | sed “s:^:<code>pwd</code>/:”<br>输出：<br>    [root@localhost opt]# ls | sed “s:^:<code>pwd</code>/:”<br>    /opt/log<br>    /opt/script<br>    /opt/soft<br>    /opt/src<br>    /opt/svndata<br>    /opt/web<br>例九：列出当前目录下的所有文件（包括隐藏文件）的绝对路径， 对目录不做递归<br>命令：find $PWD -maxdepth 1 | xargs ls -ld<br>输出：<br>[root@localhost opt]# find $PWD -maxdepth 1 | xargs ls -ld<br>drwxr-xr-x 8 root root 4096 10-11 03:43 /opt<br>drwxr-xr-x 2 root root 4096 2012-03-08 /opt/log<br>drwxr-xr-x 2 root root 4096 2012-03-08 /opt/script<br>drwxr-xr-x 5 root root 4096 10-11 03:21 /opt/soft<br>drwxr-xr-x 2 root root 4096 2012-03-08 /opt/src<br>drwxr-xr-x 4 root root 4096 10-11 05:22 /opt/svndata<br>drwxr-xr-x 4 root root 4096 10-09 00:45 /opt/web<br>例十：递归列出当前目录下的所有文件（包括隐藏文件）的绝对路径<br>命令： find $PWD | xargs ls -ld<br>例十一：指定文件时间输出格式<br>命令：<br> ls -tl –time-style=full-iso<br>输出：<br>[root@localhost soft]# ls -tl –time-style=full-iso<br>总计 350644<br>drwxr-xr-x 16 1016 1016 4096 2012-10-11 03:25:58.000000000 +0800 subversion-1.6.1<br> ls -ctl –time-style=long-iso<br>输出：<br>[root@localhost soft]# ls -ctl –time-style=long-iso<br>总计 350644<br>drwxr-xr-x 16 1016 1016      4096 2012-10-11 03:25 subversion-1.6.1<br>扩展：</p>
-<ol>
-<li>显示彩色目录列表<br> 打开/etc/bashrc, 加入如下一行:<br> alias ls=”ls –color”<br> 下次启动bash时就可以像在Slackware里那样显示彩色的目录列表了, 其中颜色的含义如下:<ol>
-<li>蓝色–&gt;目录</li>
-<li>绿色–&gt;可执行文件</li>
-<li>红色–&gt;压缩文件</li>
-<li>浅蓝色–&gt;链接文件</li>
-<li>灰色–&gt;其他文件</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html</a></p>
-<hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1973,7 +1968,7 @@ zgy@NLP ~/test $
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
