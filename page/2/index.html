@@ -276,6 +276,166 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/每天一个linux命令（二）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangyaoZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuangyaoZhao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/18/每天一个linux命令（二）/" itemprop="url">每天一个linux命令（二）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T18:52:53+08:00">
+                2017-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/18/每天一个linux命令（二）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（二）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h1><p>Linux cd 命令可以说是Linux中最基本的命令语句，其他的命令语句要进行操作，都是建立在使用 cd 命令上的。<br>所以，学习Linux 常用命令，首先就要学好 cd 命令的使用方法技巧。</p>
+<h4 id="1-命令格式："><a href="#1-命令格式：" class="headerlink" title="1. 命令格式："></a><strong>1. 命令格式：</strong></h4><p>cd [目录名]</p>
+<h4 id="2-命令功能："><a href="#2-命令功能：" class="headerlink" title="2. 命令功能："></a><strong>2. 命令功能：</strong></h4><p>切换当前目录至dirName</p>
+<h4 id="3-常用范例："><a href="#3-常用范例：" class="headerlink" title="3. 常用范例："></a><strong>3. 常用范例：</strong></h4><h5 id="3-1-例一：进入系统根目录"><a href="#3-1-例一：进入系统根目录" class="headerlink" title="3.1 例一：进入系统根目录"></a><strong>3.1 例一：进入系统根目录</strong></h5><p>命令：<br>cd /<br>输出：<br>[root@localhost ~]# cd /<br>说明：进入系统根目录,上面命令执行完后拿ls命令看一下，当前目录已经到系统根目录了 </p>
+<p>命令：<br>cd .. 或者 cd .. //<br>输出:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> /</div><div class="line">zgy@NLP / $ <span class="built_in">pwd</span></div><div class="line">/</div><div class="line">zgy@NLP / $ <span class="built_in">cd</span> /home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  cnn  pytorch  stanford-segmenter-2015-12-09  word2vec</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> ..//</div><div class="line">zgy@NLP /home $ <span class="built_in">pwd</span></div><div class="line">/home</div></pre></td></tr></table></figure></p>
+<p>说明：使用cd 命令实现进入当前目录的父目录的父目录。 </p>
+<h5 id="3-2-例二：使用-cd-命令进入当前用户主目录"><a href="#3-2-例二：使用-cd-命令进入当前用户主目录" class="headerlink" title="3.2 例二：使用 cd 命令进入当前用户主目录"></a><strong>3.2 例二：使用 cd 命令进入当前用户主目录</strong></h5><p>“当前用户主目录”和“系统根目录”是两个不同的概念。进入当前用户主目录有两个方法。<br>命令1：<br>cd<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span></div><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
+<p>命令2：<br>cd ~<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> ~</div><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
+<h5 id="3-3-例三：跳转到指定目录"><a href="#3-3-例三：跳转到指定目录" class="headerlink" title="3.3 例三：跳转到指定目录"></a><strong>3.3 例三：跳转到指定目录</strong></h5><p>命令：<br>cd /opt/soft<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1 [root@localhost ~]<span class="comment"># cd /opt/soft</span></div><div class="line">2 [root@localhost soft]<span class="comment"># pwd</span></div><div class="line">3 /opt/soft</div><div class="line">4 [root@localhost soft]<span class="comment"># cd jdk1.6.0_16/</span></div><div class="line">5 [root@localhost jdk1.6.0_16]<span class="comment"># pwd</span></div><div class="line">6 /opt/soft/jdk1.6.0_16</div><div class="line">7 [root@localhost jdk1.6.0_16]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<p>说明：<br>跳转到指定目录，从根目录开始，目录名称前加 / ,当前目录内的子目录直接写名称即可</p>
+<h5 id="3-4-例四：返回进入此目录之前所在的目录"><a href="#3-4-例四：返回进入此目录之前所在的目录" class="headerlink" title="3.4 例四：返回进入此目录之前所在的目录"></a><strong>3.4 例四：返回进入此目录之前所在的目录</strong></h5><p>命令：<br>cd -<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $</div></pre></td></tr></table></figure></p>
+<h5 id="3-5-例五：把上个命令的参数作为cd参数使用。"><a href="#3-5-例五：把上个命令的参数作为cd参数使用。" class="headerlink" title="3.5 例五：把上个命令的参数作为cd参数使用。 "></a><strong>3.5 例五：把上个命令的参数作为cd参数使用。 </strong></h5><p>命令：<br>cd !$<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> cnn/</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">pwd</span></div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">cd</span> -</div><div class="line">/home/zgy/cnn</div><div class="line">zgy@NLP ~/cnn $ <span class="built_in">cd</span> !$</div><div class="line"><span class="built_in">cd</span> -</div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $ <span class="built_in">pwd</span></div><div class="line">/home/zgy</div><div class="line">zgy@NLP ~ $</div></pre></td></tr></table></figure></p>
+<p>over</p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html</a></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/每天一个linux命令（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -631,7 +791,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -653,7 +813,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
