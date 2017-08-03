@@ -276,6 +276,163 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/每天一个linux命令（四）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangyaoZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuangyaoZhao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/20/每天一个linux命令（四）/" itemprop="url">每天一个linux命令（四）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T10:24:33+08:00">
+                2017-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/20/每天一个linux命令（四）/" class="leancloud_visitors" data-flag-title="每天一个linux命令（四）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><strong>mkdir</strong></h1><p>linux mkdir 命令用来创建指定的名称的目录，要求创建目录的用户在当前目录中具有写权限，并且指定的目录名不能是当前目录中已有的目录。</p>
+<h3 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a><strong>1．命令格式：</strong></h3><p>mkdir [选项] 目录…</p>
+<h3 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a><strong>2．命令功能：</strong></h3><p>通过 mkdir 命令可以实现在指定位置创建以 DirName(指定的文件名)命名的文件夹或目录。要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)。 </p>
+<h3 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a><strong>3．命令参数：</strong></h3><p>-m, –mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask<br>-p, –parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录;<br>-v, –verbose  每次创建新目录都显示信息<br>–help   显示此帮助信息并退出<br>–version  输出版本信息并退出</p>
+<h3 id="4．命令实例："><a href="#4．命令实例：" class="headerlink" title="4．命令实例："></a><strong>4．命令实例：</strong></h3><h5 id="4-1-例一：创建一个空目录"><a href="#4-1-例一：创建一个空目录" class="headerlink" title="4.1 例一：创建一个空目录 "></a><strong>4.1 例一：创建一个空目录 </strong></h5><p>命令：<br>mkdir test1<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~ $ mkdir test1</div><div class="line">zgy@NLP ~ $ ls</div><div class="line">anaconda3  cnn  pytorch  stanford-segmenter-2015-12-09  test1  word2vec</div></pre></td></tr></table></figure></p>
+<h5 id="4-2-例二：递归创建多个目录"><a href="#4-2-例二：递归创建多个目录" class="headerlink" title="4.2 例二：递归创建多个目录 "></a><strong>4.2 例二：递归创建多个目录 </strong></h5><p>命令：<br>mkdir -p test2/test22<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/test1 $ mkdir -p test2/test22</div><div class="line">zgy@NLP ~/test1 $ ll</div><div class="line">total 12</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 20 10:07 .</div><div class="line">drwxr-xr-x 16 zgy zgy 4096 Jul 20 10:04 ..</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 20 10:07 test2</div><div class="line">zgy@NLP ~/test1 $ <span class="built_in">cd</span> test2</div><div class="line">zgy@NLP ~/test1/test2 $ ll</div><div class="line">total 12</div><div class="line">drwxrwxr-x 3 zgy zgy 4096 Jul 20 10:07 .</div><div class="line">drwxrwxr-x 3 zgy zgy 4096 Jul 20 10:07 ..</div><div class="line">drwxrwxr-x 2 zgy zgy 4096 Jul 20 10:07 test22</div><div class="line">zgy@NLP ~/test1/test2 $</div></pre></td></tr></table></figure></p>
+<h5 id="4-3-例三：创建权限为777的目录"><a href="#4-3-例三：创建权限为777的目录" class="headerlink" title="4.3 例三：创建权限为777的目录 "></a><strong>4.3 例三：创建权限为777的目录 </strong></h5><p>命令：<br>mkdir -m 777 test3<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mkdir -m 777 test3</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ ll</div><div class="line">total 20</div><div class="line">drwxrwxr-x  5 zgy zgy 4096 Jul 20 10:10 .</div><div class="line">drwxr-xr-x 16 zgy zgy 4096 Jul 20 10:09 ..</div><div class="line">drwxrwxr-x  2 zgy zgy 4096 Jul 20 10:10 test1</div><div class="line">drwxrwxr-x  3 zgy zgy 4096 Jul 20 10:10 test2</div><div class="line">drwxrwxrwx  2 zgy zgy 4096 Jul 20 10:10 test3</div></pre></td></tr></table></figure></p>
+<p>说明：<br>test3 的权限为rwxrwxrwx</p>
+<h5 id="4-4-例四：创建新目录都显示信息"><a href="#4-4-例四：创建新目录都显示信息" class="headerlink" title="4.4 例四：创建新目录都显示信息"></a><strong>4.4 例四：创建新目录都显示信息</strong></h5><p>命令：<br>mkdir -v test4<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mkdir -v test5</div><div class="line">mkdir: created directory ‘test5’</div><div class="line">zgy@NLP ~/<span class="built_in">test</span> $ mkdir -vp test6/test66</div><div class="line">mkdir: created directory ‘test6’</div><div class="line">mkdir: created directory ‘test6/test66’</div></pre></td></tr></table></figure></p>
+<h5 id="4-5-例五：一个命令创建项目的目录结构"><a href="#4-5-例五：一个命令创建项目的目录结构" class="headerlink" title="4.5 例五：一个命令创建项目的目录结构"></a><strong>4.5 例五：一个命令创建项目的目录结构</strong></h5><p>参考：<a href="http://www.ibm.com/developerworks/cn/aix/library/au-badunixhabits.html" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/aix/library/au-badunixhabits.html</a><br>命令：<br>mkdir -vp scf/{lib/,bin/,doc/{info,product},logs/{info,product},service/deploy/{info,product}}<br>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># mkdir -vp scf/&#123;lib/,bin/,doc/&#123;info,product&#125;,logs/&#123;info,product&#125;,service/deploy/&#123;info,product&#125;&#125;</span></div><div class="line">mkdir: 已创建目录 “scf”</div><div class="line">mkdir: 已创建目录 “scf/lib”</div><div class="line">mkdir: 已创建目录 “scf/bin”</div><div class="line">mkdir: 已创建目录 “scf/doc”</div><div class="line">mkdir: 已创建目录 “scf/doc/info”</div><div class="line">mkdir: 已创建目录 “scf/doc/product”</div><div class="line">mkdir: 已创建目录 “scf/logs”</div><div class="line">mkdir: 已创建目录 “scf/logs/info”</div><div class="line">mkdir: 已创建目录 “scf/logs/product”</div><div class="line">mkdir: 已创建目录 “scf/service”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy/info”</div><div class="line">mkdir: 已创建目录 “scf/service/deploy/product”</div><div class="line">[root@localhost <span class="built_in">test</span>]<span class="comment"># tree scf/</span></div><div class="line">scf/</div><div class="line">|-- bin</div><div class="line">|-- doc</div><div class="line">|   |-- info</div><div class="line">|   `-- product</div><div class="line">|-- lib</div><div class="line">|-- logs</div><div class="line">|   |-- info</div><div class="line">|   `-- product</div><div class="line">`-- service</div><div class="line">   	 	`-- deploy</div><div class="line">  	    	|-- info</div><div class="line">        	`-- product</div><div class="line">12 directories, 0 files</div></pre></td></tr></table></figure></p>
+<hr>
+<p>转自<a href="http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html" target="_blank" rel="external">http://www.cnblogs.com/peida/archive/2012/10/25/2738271.html</a></p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/每天一个linux命令（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -949,7 +1106,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
